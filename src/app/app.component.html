@@ -188,9 +188,9 @@
         <div class="widget search">
           <div class="widget-content">
             <div id="searchbox">
-              <input type="text" placeholder="請輸入搜尋關鍵字" accesskey="s" (keyup)="keySomeThing($event)">
-              <input type="button" value="搜尋" id="searchbutton">
-              輸入的字元數={{ textCount }}
+              <input type="text" placeholder="請輸入搜尋關鍵字" accesskey="s" [(ngModel)]="keyword" (keyup.escape)="keyclear()">
+              <input type="button" value="搜尋" id="searchbutton">Í
+              輸入的字元數={{ keyword.length }}
             </div>
           </div>
         </div>
@@ -201,7 +201,7 @@
           <h4 class="widget-header">
             文章日曆
             <span class="pull-right"></span>
-          </h4>
+          </h4>‚
           <div class="widget-content">
             <div style="text-align: center">
               <div id="calendarContainer">

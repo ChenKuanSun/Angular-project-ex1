@@ -9,15 +9,11 @@ export class AppComponent {
   title = 'app';
   url = 'http://blog.miniasp.com/';
   imgurl = '/assets/images/logo.png';
-  textCount = 0;
+  keyword = '';
   constructor() {
   }
-  keySomeThing($event) {
-    console.log(this);
-    if ($event.code === 'Escape') {
-      $event.target.value = '';
-    }
-    this.textCount = $event.target.value.length;
+  keyclear() {
+    this.keyword = '';
   }
   changeTitle(altKey: boolean) {
     if (altKey) {
