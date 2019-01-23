@@ -21,7 +21,7 @@ export class AppComponent {
   }
   changeTitle(altKey: boolean) {
     if (altKey) {
-      this.title  = 'The Will Will Web';
+      this.title = 'The Will Will Web';
     }
   }
 }
