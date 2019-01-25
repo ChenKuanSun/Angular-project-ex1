@@ -1,8 +1,9 @@
 <header class="post-header">
   <h2 class="post-title">
-    <a *ngIf="!isEdit" [href]="item.href">{{ item.title}}</a>
-    <input *ngIf="isEdit" type="text" size="70" [value]="item.title" (keyup.enter)="item.title = $event.target.value"
-      (keyup.escape)="$event.target.value = item.title">
+    <a *ngIf="!isEdit" [href]="item.href">{{ item.title   }}</a>
+    <input *ngIf="isEdit" type="text" size="70" [value]="newTitle"
+      (keyup.enter)="doEdit($event.target.value)"
+      (keyup.escape)="$event.target.value = item.title; isEdit = false">
   </h2>
   <div class="post-info clearfix">
     <span class="post-date">

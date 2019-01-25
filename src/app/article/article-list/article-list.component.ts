@@ -11,7 +11,15 @@ export class ArticleListComponent implements OnInit {
   doDelete(item) {
     this.data = this.data.filter((v) => {
       return v !== item;
-    })
+    });
+  }
+  changeTitle($event: any) {
+    this.data = this.data.map((item) => {
+      if (item.id == $event.id) {
+        return Object.assign({}, item, $event);
+      }
+      return item;
+    });
   }
   ngOnInit() {
     this.data = [
