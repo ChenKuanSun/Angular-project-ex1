@@ -14,7 +14,7 @@ export class ArticleHeaderComponent implements OnInit {
   @Output()
   delete = new EventEmitter<any>();
 
-
+  isEdit = false;
   constructor() { }
 
   ngOnInit() {
