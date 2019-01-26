@@ -4,12 +4,14 @@ import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleHeaderComponent } from './article-header/article-header.component';
 import { ArticleBodyComponent } from './article-body/article-body.component';
 import { FormsModule } from '@angular/forms';
+import { ApiModule } from '../api/api.module';
 
 @NgModule({
   declarations: [ArticleListComponent, ArticleHeaderComponent, ArticleBodyComponent],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ApiModule
   ],
   exports: [ArticleListComponent]
 })
